@@ -2,8 +2,8 @@
 odoo_tests
 ===============================
 
-.. image:: https://badge.fury.io/py/odoo_tests.png
-    :target: http://badge.fury.io/py/odoo_tests
+.. image:: https://badge.fury.io/py/odoo_tests_openerp_scripts.png
+    :target: http://badge.fury.io/py/odoo_tests_openerp_scripts
 
 
 Test openerp_scripts to be used with Anybox Odoo recipe.
