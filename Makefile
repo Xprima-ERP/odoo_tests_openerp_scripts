@@ -4,13 +4,7 @@ help:
 	@echo "clean - remove all build, test, coverage and Python artifacts"
 	@echo "clean-build - remove build artifacts"
 	@echo "clean-pyc - remove Python file artifacts"
-	@echo "clean-test - remove test and coverage artifacts"
 	@echo "lint - check style with flake8"
-	@echo "test - run tests quickly with the default Python"
-	@echo "test-all - run tests on every Python version with tox"
-	@echo "coverage - check code coverage quickly with the default Python"
-	@echo "docs - generate Sphinx HTML documentation, including API docs"
-	@echo "docs-view - generate Sphinx HTML documentation, including API docs and opens the default browser"
 	@echo "release - package and upload a release"
 	@echo "dist - package"
 
@@ -27,35 +21,8 @@ clean-pyc:
 	find . -name '*~' -exec rm -f {} +
 	find . -name '__pycache__' -exec rm -fr {} +
 
-clean-test:
-	rm -fr .tox/
-	rm -f .coverage
-	rm -fr htmlcov/
-
 lint:
-	flake8 odoo_tests tests
-
-test:
-	python setup.py test
-
-test-all:
-	tox
-
-coverage:
-	coverage run --source odoo_tests setup.py test
-	coverage report -m
-	coverage html
-	open htmlcov/index.html
-
-docs:
-	rm -f docs/odoo_tests.rst
-	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ odoo_tests
-	$(MAKE) -C docs clean
-	$(MAKE) -C docs html
-
-docs-view: docs
-	xdg-open docs/_build/html/index.html
+	flake8 --exclude=.ropeproject odoo_tests
 
 release: clean
 	python setup.py sdist upload

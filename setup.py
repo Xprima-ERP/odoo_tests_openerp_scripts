@@ -9,25 +9,20 @@ except ImportError:
 
 
 readme = open('README.rst').read()
-history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 requirements = [
     'psycopg2==2.5.4',
     'argparse==1.2.2',
 ]
 
-test_requirements = [
-    # TODO: put package test requirements here
-]
-
 setup(
     name='Odoo Tests',
     version='0.1.0',
-    description='Test script to be used with Anybox Odoo recipe.',
-    long_description=readme + '\n\n' + history,
+    description='Test openerp_scripts to be used with Anybox Odoo recipe.',
+    long_description=readme,
     author='Sebastien Delisle',
     author_email='seb0del@gmail.com',
-    url='https://github.com/maxc0c0s/odoo_tests',
+    url='https://github.com/maxc0c0s/odoo_tests_openerp_scripts',
     packages=[
         'odoo_tests',
     ],
@@ -43,15 +38,11 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
+        'Framework :: Buildout :: Extension',
         "Programming Language :: Python :: 2",
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
     ],
-    test_suite='tests',
-    tests_require=test_requirements,
     entry_points={
         "console_scripts": [
             "test_odoo = odoo_tests.odoo_tests:main",
