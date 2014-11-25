@@ -19,7 +19,7 @@ Features
    parts = odoo
 
    [odoo]
-   eggs = odoo_tests
+   eggs = odoo_tests_openerp_scripts
    recipe = anybox.recipe.openerp[bzr]:server
    version = git https://github.com/odoo/odoo.git odoo_server 7.0
    openerp_scripts = test_odoo=test_odoo arguments=session
