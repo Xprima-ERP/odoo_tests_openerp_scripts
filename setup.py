@@ -16,7 +16,7 @@ requirements = [
 ]
 
 setup(
-    name='Odoo Tests',
+    name='odoo_tests_openerp_scripts',
     version='0.1.0',
     description='Test openerp_scripts to be used with Anybox Odoo recipe.',
     long_description=readme,
@@ -32,7 +32,7 @@ setup(
     install_requires=requirements,
     license="GNU GPL v3.0",
     zip_safe=False,
-    keywords='odoo_tests',
+    keywords='odoo_tests_openerp_scripts',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
