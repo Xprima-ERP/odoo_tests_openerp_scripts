@@ -17,7 +17,7 @@ requirements = [
 
 setup(
     name='odoo_tests_openerp_scripts',
-    version='0.1.0',
+    version='0.1.1',
     description='Test openerp_scripts to be used with Anybox Odoo recipe.',
     long_description=readme,
     author='Sebastien Delisle',
