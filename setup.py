@@ -12,7 +12,7 @@ readme = open('README.rst').read()
 
 requirements = [
     'psycopg2==2.5.4',
-    'argparse==1.2.2',
+    'argparse==1.3.0',
 ]
 
 setup(
