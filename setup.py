@@ -11,13 +11,13 @@ except ImportError:
 readme = open('README.rst').read()
 
 requirements = [
-    'psycopg2==2.5.4',
+    'psycopg2==2.6',
     'argparse==1.3.0',
 ]
 
 setup(
     name='odoo_tests_openerp_scripts',
-    version='0.1.1',
+    version='0.1.2',
     description='Test openerp_scripts to be used with Anybox Odoo recipe.',
     long_description=readme,
     author='Sebastien Delisle',
