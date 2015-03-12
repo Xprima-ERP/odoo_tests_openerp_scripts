@@ -44,8 +44,6 @@ def create_db(session):
     cur.execute("CREATE DATABASE %s;" % getattr(args, DBNAME_PARAM))
     cur.close()
     conn.close()
-    session.open(db=getattr(args, DBNAME_PARAM), with_demo=True)
-    session.close()
 
 
 def drop_db(session):
